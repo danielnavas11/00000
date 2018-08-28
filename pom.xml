@@ -107,8 +107,9 @@
                     <!-- Para desencriptar archivos bpg -->
                     <password>dn.17329667</password>
                     <!-- Parametro para desencriptar (true) los archivos bpg despues de clonar el repositorio
-                    Esto se realizara al primer "mvn clean install" -->
-                    <!-- Despues de primer mvn clean install 0 -->
+                    Esto se realizara al primer "mvn clean install" 0 "mvn com.daniel.navas:jgitcrypt:1.0.0:jgitcrypt" -->
+                    <!-- Despues de primer "mvn clean install" 0 "mvn com.daniel.navas:jgitcrypt:1.0.0:jgitcrypt"
+                    se debe cambiar este parametro a false -->
                     <!-- Si esta en false es para encriptar y subir los archivos al git-->
                     <decrypt>false</decrypt>
 
