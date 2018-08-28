@@ -101,9 +101,11 @@
                 <version>1.0.0</version>
                 <configuration>
                     <keyPublicFile>${project.build.sourceDirectory}/PublicKey.asc</keyPublicFile>
+                    <keyPrivateFile>${project.build.sourceDirectory}/PrivateKey.asc</keyPrivateFile>
                     <git>
                         <exec>C:/tools/git/bin/git.exe</exec>
                         <debug>false</debug>
+                        <decrypt>false</decrypt>
                         <url>http://github.com/danielnavas11/00000.git</url>
                         <credentials>
                             <user>danielnavas11</user>
