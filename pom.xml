@@ -100,19 +100,34 @@
                 <artifactId>jgitcrypt</artifactId>
                 <version>1.0.0</version>
                 <configuration>
+                    <!-- Para Firmar -->
                     <keyPublicFile>${project.build.sourceDirectory}/PublicKey.asc</keyPublicFile>
+                    <!-- Para desencriptar archivos bpg -->
                     <keyPrivateFile>${project.build.sourceDirectory}/PrivateKey.asc</keyPrivateFile>
+                    <!-- Para desencriptar archivos bpg -->
                     <password>dn.17329667</password>
+                    <!-- Parametro para desencriptar (true) los archivos bpg despues de clonar el repositorio
+                    Esto se realizara al primer "mvn clean install" -->
+                    <!-- Despues de primer mvn clean install 0 -->
+                    <!-- Si esta en false es para encriptar y subir los archivos al git-->
+                    <decrypt>false</decrypt>
+
                     <git>
+                        <!-- Ejecutable git instaldo o portable en la pc,
+                        Si no lo tienen coloque jgit (Git Java) -->
                         <exec>C:/tools/git/bin/git.exe</exec>
+                        <!-- Parametro solo valido con ejecutable git-->
                         <debug>false</debug>
-                        <decrypt>false</decrypt>
+                        <!-- Repositorio git -->
                         <url>http://github.com/danielnavas11/00000.git</url>
+                        <!-- Credenciales del git -->
                         <credentials>
                             <user>danielnavas11</user>
                             <password>dn.17329667</password>
                         </credentials>
                     </git>
+                    <!-- Para crear las keys (Publica y privada) si ya existen no las crea de nuevo y firma los
+                    archivos java y los sube al git -->
                     <!--<createKey>
                         <pathKeys>${project.build.sourceDirectory}</pathKeys>
                         <id>Daniel Navas Sanchez</id>
