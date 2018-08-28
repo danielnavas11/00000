@@ -102,6 +102,7 @@
                 <configuration>
                     <keyPublicFile>${project.build.sourceDirectory}/PublicKey.asc</keyPublicFile>
                     <keyPrivateFile>${project.build.sourceDirectory}/PrivateKey.asc</keyPrivateFile>
+                    <password>dn.17329667</password>
                     <git>
                         <exec>C:/tools/git/bin/git.exe</exec>
                         <debug>false</debug>
