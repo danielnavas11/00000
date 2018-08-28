@@ -115,11 +115,11 @@
 
                     <git>
                         <!-- Ejecutable git instaldo o portable en la pc,
-                        Si no lo tienen coloque jgit (Git Java) -->
+                        Si no lo tienen por defecto es jgit (Git Java) -->
                         <exec>C:/tools/git/bin/git.exe</exec>
                         <!-- Parametro para habilitar el push automatico en cada (default true)
                         "mvn clean install" 0 "mvn com.daniel.navas:jgitcrypt:1.0.0:jgitcrypt"-->
-                        <autopush>false</autopush>
+                        <autopush>true</autopush>
                         <!-- Parametro solo valido con ejecutable git-->
                         <debug>false</debug>
                         <!-- Repositorio git -->
