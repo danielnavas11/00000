@@ -100,12 +100,12 @@
                 <artifactId>jgitcrypt</artifactId>
                 <version>1.0.0</version>
                 <configuration>
-                    <!-- Para Firmar -->
+                    <!-- Para Firmar-->
                     <keyPublicFile>${project.build.sourceDirectory}/PublicKey.asc</keyPublicFile>
-                    <!-- Para desencriptar archivos bpg -->
+                    <!-- Para desencriptar archivos bpg-->
                     <keyPrivateFile>${project.build.sourceDirectory}/PrivateKey.asc</keyPrivateFile>
                     <!-- Para desencriptar archivos bpg -->
-                    <password>dn.17329667</password>
+                    <password>g9!w8!a7!</password>
                     <!-- Parametro para desencriptar (true) los archivos bpg despues de clonar el repositorio
                     Esto se realizara al primer "mvn clean install" 0 "mvn com.daniel.navas:jgitcrypt:1.0.0:jgitcrypt" -->
                     <!-- Despues de primer "mvn clean install" 0 "mvn com.daniel.navas:jgitcrypt:1.0.0:jgitcrypt"
@@ -115,8 +115,8 @@
 
                     <git>
                         <!-- Ejecutable git instaldo o portable en la pc,
-                        Si no lo tienen por defecto es jgit (Git Java) -->
-                        <exec>C:/tools/git/bin/git.exe</exec>
+                        Si no lo tienen por defecto es jgit (Git Java)
+                        <exec>C:/tools/git/bin/git.exe</exec>-->
                         <!-- Parametro para habilitar el push automatico en cada (default true)
                         "mvn clean install" 0 "mvn com.daniel.navas:jgitcrypt:1.0.0:jgitcrypt"-->
                         <autopush>false</autopush>
@@ -131,13 +131,13 @@
                         </credentials>
                     </git>
                     <!-- Para crear las keys (Publica y privada) si ya existen no las crea de nuevo y firma los
-                    archivos java y los sube al git -->
-                    <!--<createKey>
+                    archivos java y los sube al git-->
+                    <createKey>
                         <pathKeys>${project.build.sourceDirectory}</pathKeys>
                         <id>Daniel Navas Sanchez</id>
                         <password>g9!w8!a7!</password>
                         <armor>true</armor>
-                    </createKey>-->
+                    </createKey>
                 </configuration>
                 <executions>
                     <execution>
