@@ -71,12 +71,6 @@
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-testing</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-testing</artifactId>
             <version>RELEASE</version>
         </dependency>
         <dependency>
@@ -131,7 +125,7 @@
                         </credentials>
                     </git>
                     <!-- Para crear las keys (Publica y privada) si ya existen no las crea de nuevo y firma los
-                    archivos java y los sube al git-->
+                    archivos java y los sube al git -->
                     <createKey>
                         <pathKeys>${project.build.sourceDirectory}</pathKeys>
                         <id>Daniel Navas Sanchez</id>
@@ -157,7 +151,7 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-            <plugin>
+            <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
                 <version>2.2.1</version>
@@ -215,7 +209,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 </project>
