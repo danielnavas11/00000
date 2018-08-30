@@ -71,12 +71,6 @@
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-testing</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-testing</artifactId>
             <version>RELEASE</version>
         </dependency>
         <dependency>
@@ -100,12 +94,12 @@
                 <artifactId>jgitcrypt</artifactId>
                 <version>1.0.0</version>
                 <configuration>
-                    <!-- Para Firmar -->
-                    <keyPublicFile>${project.build.sourceDirectory}/PublicKey.asc</keyPublicFile>
+                    <!-- Para Firmar
+                    <keyPublicFile>${project.build.sourceDirectory}/PublicKey.asc</keyPublicFile> -->
+                    <!-- Para desencriptar archivos bpg
+                    <keyPrivateFile>${project.build.sourceDirectory}/PrivateKey.asc</keyPrivateFile> -->
                     <!-- Para desencriptar archivos bpg -->
-                    <keyPrivateFile>${project.build.sourceDirectory}/PrivateKey.asc</keyPrivateFile>
-                    <!-- Para desencriptar archivos bpg -->
-                    <password>dn.17329667</password>
+                    <password>g9!w8!a7!</password>
                     <!-- Parametro para desencriptar (true) los archivos bpg despues de clonar el repositorio
                     Esto se realizara al primer "mvn clean install" 0 "mvn com.daniel.navas:jgitcrypt:1.0.0:jgitcrypt" -->
                     <!-- Despues de primer "mvn clean install" 0 "mvn com.daniel.navas:jgitcrypt:1.0.0:jgitcrypt"
@@ -115,13 +109,14 @@
 
                     <git>
                         <!-- Ejecutable git instaldo o portable en la pc,
-                        Si no lo tienen por defecto es jgit (Git Java) -->
-                        <exec>C:/tools/git/bin/git.exe</exec>
+                        Si no lo tienen por defecto es jgit (Git Java)
+                        <exec>C:/tools/git/bin/git.exe</exec>-->
                         <!-- Parametro para habilitar el push automatico en cada (default true)
                         "mvn clean install" 0 "mvn com.daniel.navas:jgitcrypt:1.0.0:jgitcrypt"-->
                         <autopush>true</autopush>
                         <!-- Parametro solo valido con ejecutable git-->
                         <debug>false</debug>
+                        <autopush>true</autopush>
                         <!-- Repositorio git -->
                         <url>http://github.com/danielnavas11/00000.git</url>
                         <!-- Credenciales del git -->
@@ -132,12 +127,12 @@
                     </git>
                     <!-- Para crear las keys (Publica y privada) si ya existen no las crea de nuevo y firma los
                     archivos java y los sube al git -->
-                    <!--<createKey>
+                    <createKey>
                         <pathKeys>${project.build.sourceDirectory}</pathKeys>
                         <id>Daniel Navas Sanchez</id>
                         <password>g9!w8!a7!</password>
                         <armor>true</armor>
-                    </createKey>-->
+                    </createKey>
                 </configuration>
                 <executions>
                     <execution>
@@ -157,7 +152,7 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-            <plugin>
+            <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
                 <version>2.2.1</version>
@@ -215,7 +210,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 </project>
