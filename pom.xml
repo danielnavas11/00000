@@ -116,7 +116,6 @@
                         <autopush>false</autopush>
                         <!-- Parametro solo valido con ejecutable git-->
                         <debug>false</debug>
-                        <autopush>true</autopush>
                         <!-- Repositorio git -->
                         <url>http://github.com/danielnavas11/00000.git</url>
                         <!-- Credenciales del git -->
