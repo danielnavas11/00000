@@ -101,19 +101,19 @@
                     <!-- Para desencriptar archivos bpg -->
                     <password>g9!w8!a7!</password>
                     <!-- Parametro para desencriptar (true) los archivos bpg despues de clonar el repositorio
-                    Esto se realizara al primer "mvn clean install" 0 "mvn com.daniel.navas:jgitcrypt:1.0.0:jgitcrypt" -->
-                    <!-- Despues de primer "mvn clean install" 0 "mvn com.daniel.navas:jgitcrypt:1.0.0:jgitcrypt"
+                    Esto se realizara al primer "mvn clean install" 0 "mvn jgitcrypt:jgitcrypt" -->
+                    <!-- Despues de primer "mvn clean install" 0 "mvn jgitcrypt:jgitcrypt"
                     se debe cambiar este parametro a false -->
                     <!-- Si esta en false es para encriptar y subir los archivos al git-->
-                    <decrypt>false</decrypt>
-
+                    <decrypt>true</decrypt>
+                    <extensionsFiles>java</extensionsFiles>
                     <git>
                         <!-- Ejecutable git instaldo o portable en la pc,
                         Si no lo tienen por defecto es jgit (Git Java)-->
                         <exec>C:/tools/git/bin/git.exe</exec>
                         <!-- Parametro para habilitar el push automatico en cada (default true)
-                        "mvn clean install" 0 "mvn com.daniel.navas:jgitcrypt:1.0.0:jgitcrypt"-->
-                        <autopush>true</autopush>
+                        "mvn clean install" 0 "mvn jgitcrypt:jgitcrypt"-->
+                        <autopush>false</autopush>
                         <!-- Parametro solo valido con ejecutable git-->
                         <debug>false</debug>
                         <!-- Repositorio git -->
@@ -130,7 +130,6 @@
                         <pathKeys>${project.build.sourceDirectory}</pathKeys>
                         <id>Daniel Navas Sanchez</id>
                         <password>g9!w8!a7!</password>
-                        <armor>true</armor>
                     </createKey>-->
                 </configuration>
                 <executions>
